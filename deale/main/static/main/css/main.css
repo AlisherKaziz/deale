@@ -1,0 +1,10 @@
+aside{
+    float: left;
+    background-color: #bdb092;
+    width: 20%;
+    max-width: 220px;
+    padding: 2.5% 2.5% 2.5% 2.5%;
+    height: 100vh;
+    color: black;
+    border-right: 5px solid #988868;
+}

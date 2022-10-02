@@ -1,0 +1,30 @@
+{% load static %} <!-- загружает все файлы из папки /main/static/* -->
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="{% static 'main/css/main.css'%}">
+</head>
+<body>
+    <aside>
+        <img src="{% static 'main/img/icon.jpg'%}" width="76px;" height="64px;" alt="logo">
+        <span class="empty-form">Main</span>
+        <h3>Navigation</h3>
+        <ul>
+            <a href="#"><li><i class="bi bi-asterisk"></i>Main</li></a>
+            <a href="#"><li><i class="bi bi-at"></i>Contacts</li></a>
+            <a href="#"><li><i class="bi bi-file-earmark-medical"></i>About</li></a>
+        </ul>
+    </aside>
+    <main>
+        {% block description %}
+        {% endblock %}
+    </main>
+</body>
+</html>
