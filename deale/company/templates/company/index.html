@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Book pitch time</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+      integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+  </head>
+  <body>
+    <div class="main-block">
+      <div class="left-part">
+        <i class="fas fa-baseball-ball fa-7x"></i>
+        <h1>Закажите у нас!</h1>
+        <p>Мы предоставляем несколько высококачественных кортов, доступных для аренды.</p>
+      </div>
+      <form action="/">
+        <div class="title">
+          <i class="fas fa-pencil-alt"></i>
+          <h2>Забронировать здесь</h2>
+        </div>
+        <div class="info">
+          <input
+            class="fname"
+            type="text"
+            name="full-name"
+            placeholder="ФИО"
+          />
+          <input type="text" name="email" placeholder="Эл. адрес" />
+          <input type="text" name="phone" placeholder="Номер телефона" />
+          <select>
+            <option value="sport-center" selected>Спортивный центр</option>
+            <option value="sport-center-1">Алау</option>
+            <option value="sport-center-2">Барыс Арена</option>
+          </select>
+          <select>
+            <option value="time" selected>Время*</option>
+            <option value="first-time">17:00-18:00</option>
+            <option value="second-time">18:00-19:00</option>
+          </select>
+          <select>
+            <option value="court-type" selected>Тип поля*</option>
+            <option value="padel-court">Футбольный корт</option>
+            <option value="tennis-court">Теннисный корт</option>
+          </select>
+        </div>
+        <div class="checkbox">
+          <input type="checkbox" name="checkbox" /><span
+            >Я согласен с
+            <a href="https://www.padelmasters.com/privacy-policy"
+              >Политика конфиденциальности.</a
+            ></span
+          >
+        </div>
+        <button type="submit" href="/">Забронировать</button>
+      </form>
+    </div>
+  </body>
+</html>
