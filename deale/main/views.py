@@ -1,7 +1,9 @@
 from django.shortcuts import render
-
+from .models import Company
 
 # Create your views here.
 def index(request):
-    return render(request, 'index.html')
+    companies = Company.objects.all()
+
+    return render(request, 'index.html', {'companies': companies})
 

@@ -3,5 +3,17 @@
 {% block title %}Title{% endblock %}
 
 {% block description %}
-<h1>AAAAAAAAAAAAAA</h1>
+    {% for i in companies %}
+    <div class="col-md-4 mb-5">
+        <div class="card h-100">
+                <div class="card-body">
+                    <h2 class="card-title"><a href="/company">{{i.name}}</a></h2>
+                    <p class="card-text">{{i.description}}</p>
+                </div>
+            <div class="card-footer text-center">
+                <iframe src="{{i.address}}" max-width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
 {% endblock %}
